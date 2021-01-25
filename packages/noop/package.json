@@ -1,7 +1,6 @@
 {
   "name": "@repositoryname/noop",
   "version": "1.0.0",
-  "public": true,
   "description": "doing nothing as a function",
   "main": "index.js",
   "scripts": {

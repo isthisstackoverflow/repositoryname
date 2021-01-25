@@ -1,0 +1,11 @@
+{
+  "name": "@repositoryname/noop",
+  "version": "1.0.0",
+  "description": "doing nothing as a function",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dennis Sen",
+  "license": "MIT"
+}

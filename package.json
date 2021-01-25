@@ -1,0 +1,19 @@
+{
+  "name": "@repositoryname/root",
+  "public": true,
+  "version": "0.0.0",
+  "description": "description",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isthisstackoverflow/repositoryname.git"
+  },
+  "author": "Dennis Sen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/isthisstackoverflow/repositoryname/issues"
+  },
+  "homepage": "https://github.com/isthisstackoverflow/repositoryname#readme"
+}

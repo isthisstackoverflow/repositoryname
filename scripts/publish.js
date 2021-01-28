@@ -23,7 +23,7 @@ for (const cwd of toPublish) {
     if (nextVersion) {
       cp.execSync('npm version ' + nextVersion, { cwd, stdio: 'inherit' })
       cp.execSync('npm ci', { cwd, stdio: 'inherit' })
-      cp.execSync('npm publish', { cwd, stdio: 'inherit' })
+      cp.execSync('npm publish --access=public', { cwd, stdio: 'inherit' })
       console.info(`The package ${cwd} was published.`)
     }
     else {

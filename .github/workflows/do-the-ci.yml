@@ -12,8 +12,8 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm test
       - run: npm run install:packages -- --ci
+      - run: npm test
       - run: npm run publish:packages
 #      - run: cd packages/noop && npm publish --access=public
         env:

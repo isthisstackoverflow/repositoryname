@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.5
+
+Coz I'm having a good time.
+
 ## 1.0.4
 
 Don't stop me now.

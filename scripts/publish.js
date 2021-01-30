@@ -22,14 +22,10 @@ for (const {path, name} of packages) {
       cp.execSync('npm version ' + nextVersion, { cwd: path, stdio: 'inherit' })
       cp.execSync('npm ci', { cwd: path, stdio: 'inherit' })
       cp.execSync('npm publish --access=public', { cwd: path, stdio: 'inherit' })
-      cp.execSync(
-        `git add . && git commit -m "version bump ${name}" && git push`,
-        { cwd: path, stdio: 'inherit' }
-      )
-      console.info(`The package ${cwd} was published.`)
+      console.info(`The package ${name} was published.`)
     }
     else {
-      console.info("No update in " + name)
+      console.info("No update in " + name + ".")
     }
   } catch (e) {
     console.error(e)

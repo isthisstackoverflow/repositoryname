@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.4
+
+Don't stop me now.
+
 ## 1.0.3
 
 Play it again, Sam.

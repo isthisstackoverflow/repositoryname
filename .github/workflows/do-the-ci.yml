@@ -15,6 +15,5 @@ jobs:
       - run: npm run install:packages -- --ci
       - run: npm test
       - run: npm run publish:packages
-#      - run: cd packages/noop && npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}

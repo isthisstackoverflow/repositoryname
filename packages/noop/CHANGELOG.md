@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.3
+
+Play it again, Sam.
+
 ## 1.0.2
 
 Pumping out versions to test the workflow.

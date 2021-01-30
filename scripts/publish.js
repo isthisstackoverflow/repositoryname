@@ -20,7 +20,6 @@ for (const {path, name} of packages) {
     const nextVersion = checkForNewVersion(path)
     if (nextVersion) {
       cp.execSync('npm version ' + nextVersion, { cwd: path, stdio: 'inherit' })
-      cp.execSync('npm ci', { cwd: path, stdio: 'inherit' })
       cp.execSync('npm publish --access=public', { cwd: path, stdio: 'inherit' })
       console.info(`The package ${name} was published.`)
     }

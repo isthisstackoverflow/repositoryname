@@ -1,7 +1,7 @@
 {
   "name": "@repositoryname/root",
   "public": true,
-  "version": "1.0.4",
+  "version": "0.0.0",
   "description": "description",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",

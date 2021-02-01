@@ -5,10 +5,10 @@ const packages = require('./packages')
 function checkForNewVersion (cwd) {
   const {version} = JSON.parse(fs.readFileSync(cwd + "/package.json", {encoding: "UTF-8"}))
   const markdown = fs.readFileSync(cwd + "/CHANGELOG.md", {encoding: "UTF-8"})
-  const nextVersion = markdown.split("## ")[1].split("\n")[0].trim()
+  const nextVersion = markdown.split("## ")[1].split("\n")[0]
 
   if (
-    /^\d\.\d\.\d(-.+)?$/.test(nextVersion) &&
+    /^\d\.\d\.\d(-.+)?$/.test(nextVersion.trim()) &&
     version !== nextVersion
   ) {
     return nextVersion

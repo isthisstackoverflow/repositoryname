@@ -1,9 +1,12 @@
-name: Publish to npmjs.org
+name: Publish packages with updated changelog to npmjs.org
 
-on: push
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  do-the-stuff:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Circle</title>
+    <meta name="description" content="circle">
+
+    <meta property="og:title" content="Circle">
+    <meta property="og:description" content="Circle">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Welcome
+      </h1>
+    </header>
+    <main>
+      <section>
+        <h2>Preparation</h2>
+        <p>This is a page. Please prepare for the circle below.</p>
+      </section>
+      <section>
+        <h2>Circle</h2>
+        <p>
+          <div class="circle"></div>
+        </p>
+      </section>
+      <section>
+        <h2>The Aftermath</h2>
+        <p>I told you to prepare yourself.</p>
+        <p>I told you, dog.</p>
+      </section>
+    </main>
+  </body>
+  <script>
+    var target = document.getElementsByClassName('circle')[0];
+    var options = '0123456789ABCDEF'
+    var cursors = [
+      'context-menu',
+      'help',
+      'pointer',
+      'progress',
+      'wait',
+      'cell',
+      'crosshair',
+      'text',
+      'vertical-text',
+      'alias',
+      'copy',
+      'move',
+      'no-drop',
+      'not-allowed',
+      'grab',
+      'grabbing',
+      'alt-scroll',
+      'col-resize',
+      'row-resize',
+      'n-resize',
+      'e-resize',
+      's-resize',
+      'w-resize',
+      'ne-resize',
+      'nw-resize',
+      'se-resize',
+      'sw-resize',
+      'ew-resize',
+      'ns-resize',
+      'nesw-resize',
+      'nwse-resize',
+      'zoom-in',
+      'zoom-out'
+    ]
+
+    function randomize () {
+      target.style.background = '#' + '000000'.split('').map(_ => options[Math.floor(Math.random() * 16)]).join('');
+      target.style.cursor = cursors[Math.floor(Math.random() * cursors.length)];
+    }
+
+    target.addEventListener('mouseenter', randomize);
+    target.addEventListener('mouseleave', randomize);
+  </script>
+</html>

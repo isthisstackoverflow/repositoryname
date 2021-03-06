@@ -1,0 +1,35 @@
+* {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  max-width: 80ch;
+}
+
+sup a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  text-indent: 2em;
+}

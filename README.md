@@ -1,7 +1,7 @@
+![A nonsensical badge announcing that the Repo is Mono](https://img.shields.io/badge/Repo-Mono-success)
+
 # repositoryname
 
-Things do go here eventually.
+The repository that contains what repositories should contain.
 
-[Wow, GitHub pages](https://isthisstackoverflow.github.io/repositoryname/index.html).
-
-Things do go there eventually, too.
+[We have a GitHub hub page](https://isthisstackoverflow.github.io/repositoryname/index.html). It's a playground.

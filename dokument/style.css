@@ -1,10 +1,41 @@
+:root {
+  --bright-bg: #FFFFFF;
+  --bright-fg: #111111;
+  --dark-bg: #111111;
+  --dark-fg: #EEEEEE;
+}
+
 * {
   font-family: 'Noto Sans JP', sans-serif;
+  transition: background-color 100ms ease-in-out,
+    color 100ms ease-in-out;
+}
+
+.dark * {
+  color: var(--dark-fg);
+}
+
+a:focus {
+  outline: 2px solid var(--bright-fg);
+}
+
+.dark a:focus {
+  outline: 2px solid var(--dark-fg);
 }
 
 html, body {
   margin: 0;
   padding: 0;
+}
+
+.dark {
+  background-color: var(--dark-bg);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -22,7 +53,12 @@ header {
 }
 
 main {
-  max-width: 80ch;
+  max-width: calc(80ch + 2em);
+  padding: 0 2em;
+}
+
+nav a {
+  color: inherit;
 }
 
 sup a {
@@ -32,4 +68,30 @@ sup a {
 
 p {
   text-indent: 2em;
+}
+
+#light-switch {
+  background-color: var(--bright-bg);
+  border: 1px solid var(--bright-fg);
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+}
+
+.dark #light-switch {
+  background-color: var(--dark-bg);
+  border: 1px solid var(--dark-fg);
+}
+
+#light-switch:focus, #light-switch:hover {
+  background-color: var(--dark-bg);
+  border: 1px solid var(--dark-bg);
+  color: var(--dark-fg);
+}
+
+.dark #light-switch:focus, .dark #light-switch:hover {
+  background-color: var(--bright-bg);
+  border: 1px solid var(--bright-bg);
+  color: var(--bright-fg);
 }

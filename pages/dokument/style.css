@@ -73,7 +73,7 @@ p {
 #light-switch {
   background-color: var(--bright-bg);
   border: 1px solid var(--bright-fg);
-  position: fixed;
+  position: absolute;
   top: 1em;
   right: 1em;
   cursor: pointer;
@@ -94,4 +94,13 @@ p {
   background-color: var(--bright-bg);
   border: 1px solid var(--bright-bg);
   color: var(--bright-fg);
+}
+
+footer {
+  margin-top: 4em;
+  border-top: 1px solid var(--bright-fg);
+}
+
+.dark footer {
+  border-top: 1px solid var(--dark-fg);
 }

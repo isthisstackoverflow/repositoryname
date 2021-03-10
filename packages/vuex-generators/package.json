@@ -1,6 +1,6 @@
 {
   "name": "@repositoryname/vuex-generators",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Generator functions for simple vuex store interactions.",
   "keywords": [
     "vuex",

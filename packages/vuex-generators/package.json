@@ -12,5 +12,9 @@
     "Dennis Sen",
     "Pascal Roehling"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isthisstackoverflow/repositoryname.git"
+  }
 }

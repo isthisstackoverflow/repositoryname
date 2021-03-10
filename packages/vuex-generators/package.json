@@ -15,6 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/isthisstackoverflow/repositoryname.git"
+    "url": "https://github.com/isthisstackoverflow/repositoryname.git",
+    "directory": "packages/vuex-generators"
   }
 }

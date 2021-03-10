@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.6
+
+Add repository information to package.json and README file.
+
 ## 1.0.5
 
 Coz I'm having a good time.

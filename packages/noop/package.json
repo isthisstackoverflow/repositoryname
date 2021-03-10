@@ -4,5 +4,10 @@
   "description": "doing nothing as a function",
   "main": "index.js",
   "author": "Dennis Sen",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isthisstackoverflow/repositoryname.git",
+    "directory": "packages/noop"
+  }
 }

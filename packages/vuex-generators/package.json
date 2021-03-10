@@ -1,0 +1,16 @@
+{
+  "name": "@repositoryname/vuex-generators",
+  "version": "1.0.0",
+  "description": "Generator functions for simple vuex store interactions.",
+  "keywords": [
+    "vuex",
+    "vue",
+    "generator"
+  ],
+  "main": "index.js",
+  "contributors": [
+    "Dennis Sen",
+    "Pascal Roehling"
+  ],
+  "license": "MIT"
+}

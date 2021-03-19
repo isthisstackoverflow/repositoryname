@@ -2,6 +2,8 @@
 
 # repositoryname
 
-The repository that contains what repositories should contain.
+_The repository that contains what repositories should contain._
 
-[We have a GitHub hub page](https://isthisstackoverflow.github.io/repositoryname/index.html). It's a playground.
+On the one hand, we have packages. See packages folder.
+
+On the other, we have [this](https://isthisstackoverflow.github.io/repositoryname/index.html). It's a webpage consisting of german texts and, probably soonish, international images.

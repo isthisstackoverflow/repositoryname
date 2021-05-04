@@ -70,7 +70,7 @@ export function getSetGenerator (prefixOrNames, names) {
             },
             set(value) {
                 this.$store.commit(
-                    `${prefix}${settify(key)}`,
+                    `${prefix}${settify(curr)}`,
                     value
                 )
             },

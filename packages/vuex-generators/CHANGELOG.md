@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.1.1
+
+- Fixed variable name.
+
 ## 1.1.0
 
 - Added usage example to **[README](README.md)**.

@@ -53,20 +53,14 @@ export function generateSimpleGetters (state) {
  *                          Mustn't be set if prefixOrNames is String[].
  * @returns {Array} Array of get-settable objects
  */
-export function getSetGenerator (prefixOrNames, names) {
+ export function getSetGenerator (prefixOrNames, names) {
     const prefix = typeof prefixOrNames === 'string' ? `${prefixOrNames}/` : ''
     const reducable = typeof prefixOrNames === 'string' ? names : prefixOrNames
 
     return reducable.reduce((acc, curr) => {
         acc[curr] = {
             get() {
-                let pointer = this.$store.state
-                if (prefix) {
-                    prefixOrNames
-                        .split('/')
-                        .forEach((moduleName) => (pointer = pointer[moduleName]))
-                }
-                return pointer[curr]
+                return this.$store.getters[`${prefix}${curr}`]
             },
             set(value) {
                 this.$store.commit(

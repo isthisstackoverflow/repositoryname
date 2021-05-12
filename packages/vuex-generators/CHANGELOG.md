@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.1.2
+
+- Works now on getters instead of state, making it harmonic to other generators. Previous behaviour somewhat feels like a bug, hence modelling this as patch.
+
 ## 1.1.1
 
 - Fixed variable name.

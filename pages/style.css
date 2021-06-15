@@ -5,6 +5,16 @@
   --dark-fg: #EEEEEE;
 }
 
+h2 {
+  background: var(--bright-bg);
+  border-bottom: 1px solid var(--bright-fg);
+}
+
+.dark h2 {
+  background: var(--dark-bg);
+  border-bottom: 1px solid var(--dark-fg);
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -103,36 +113,4 @@ p {
   background-color: var(--bright-bg);
   border: 1px solid var(--bright-bg);
   color: var(--bright-fg);
-}
-
-footer {
-  position: sticky;
-  display: flex;
-  flex-direction: column;
-  bottom: 0;
-  padding: 4em 0;
-  width: 100%;
-  background-color: var(--dark-bg);
-  color: var(--dark-fg);
-}
-
-.dark footer {
-  background-color: var(--dark-fg);
-}
-
-.dark footer span.final-statement {
-  color: var(--dark-bg);
-}
-
-footer span {
-  margin: 2em;
-}
-
-footer img {
-  margin: 0 auto;
-  filter: invert(1);
-}
-
-.dark footer img {
-  filter: invert(0);
 }

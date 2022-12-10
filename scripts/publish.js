@@ -26,10 +26,10 @@ for (const {path, name} of packages) {
         + process.env.NODE_AUTH_TOKEN,
       { cwd: path })
       cp.execSync('npm publish --access=public', context)
-      console.info(`The package ${name} was published.`)
+      console.info(`The package '${name}' was published.`)
     }
     else {
-      console.info("No update in " + name + ".")
+      console.info("No update in '" + name + "'.")
     }
   } catch (e) {
     console.error(e)

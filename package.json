@@ -1,8 +1,8 @@
 {
   "name": "@repositoryname/root",
-  "public": true,
+  "private": true,
   "version": "0.0.0",
-  "description": "description",
+  "description": "n'est pas un forfait",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "install:packages": "node ./scripts/install.js",

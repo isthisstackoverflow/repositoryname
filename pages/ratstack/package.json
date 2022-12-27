@@ -1,6 +1,6 @@
 {
   "name": "ratstack",
-  "version": "0.1.0",
+  "version": "1.0.0-alpha.0",
   "description": "this is the place where all the ratties go",
   "scripts": {
     "dev": "parcel src/index.html",

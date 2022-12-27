@@ -6,4 +6,4 @@ _The repository that contains what repositories should contain._
 
 On the one hand, we have packages. See packages folder; each package comes with its respective documentation.
 
-On the other, we have [this](https://isthisstackoverflow.github.io/repositoryname/index.html). It's a viewable webpage that includes contents.
+On the other, we have [nothing](https://isthisstackoverflow.github.io/repositoryname/index.html), presented as a viewable webpage that appears to include contents. I am not particularly happy with it.

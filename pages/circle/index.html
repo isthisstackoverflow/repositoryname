@@ -10,33 +10,18 @@
     <meta property="og:title" content="Circle">
     <meta property="og:description" content="Circle">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
       <h1>
-        Welcome
+        Circle
       </h1>
     </header>
     <main>
-      <section>
-        <h2>Preparation</h2>
-        <p>This is a page. Please prepare for the circle below.</p>
-      </section>
-      <section>
-        <h2>Circle</h2>
-        <p>
-          <div class="circle"></div>
-        </p>
-      </section>
-      <section>
-        <h2>The Aftermath</h2>
-        <p>I told you to prepare yourself.</p>
-        <p>I told you, dog.</p>
-      </section>
+      <p>
+        <div class="circle" aria-label="The depiction of a circle."></div>
+      </p>
     </main>
   </body>
   <script>
@@ -79,8 +64,13 @@
     ]
 
     function randomize () {
-      target.style.background = '#' + '000000'.split('').map(_ => options[Math.floor(Math.random() * 16)]).join('');
-      target.style.cursor = cursors[Math.floor(Math.random() * cursors.length)];
+      target.style.background = '#' +
+        '000000'
+          .split('')
+          .map(_ => options[Math.floor(Math.random() * 16)])
+          .join('');
+      target.style.cursor =
+        cursors[Math.floor(Math.random() * cursors.length)];
     }
 
     target.addEventListener('mouseenter', randomize);

@@ -2,6 +2,8 @@
 
 I have no idea, so I write it down. 🐀
 
+// TODO simplify, this is a joke game, not a strategy game
+
 ## some jokes thrown in
 
 AcceleRATed GeneRATions - Think, + Rats

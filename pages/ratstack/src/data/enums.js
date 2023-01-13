@@ -1,0 +1,46 @@
+/**
+ * Enum of values that may be modified by some effect.
+ */
+export const MODIFIABLE = {
+  EAT: 0,
+  THINK: 1,
+  OBEDIENCE: 2,
+  ATTACK: 10,
+  ATTACK_STEAL: 11,
+  ATTACK_TERRORIZE: 12,
+  ATTACK_SUBJUGATE: 13,
+  DEFEND: 20,
+  DEFEND_STEAL: 21,
+  DEFEND_TERRORIZE: 22,
+  DEFEND_SUBJUGATE: 23
+}
+
+export const DECLARATION = {
+  PACK: 0,
+  MAFIA: 1,
+  // TODO step between these?
+  LORDSHIP: 2,
+  SCREECHING: 3,
+  HOLY_RAT_EMPIRE: 4,
+  NATION: 5
+}
+
+export const BUILDING = {
+  FOOD_HOLE: 0,
+  MAKE_RATS: 1,
+  RAT_HOLE: 2,
+  EAT_BUNKER: 3,
+  SHARP_TEETH_SHOP: 4
+}
+
+export const THINK = {
+  BOSS_GOOD: 0,
+  OTHER_PACK_BAD: 1,
+  TURN_THINK_AROUND: 2,
+  DONT_EAT_ALL: 3,
+  SHARPEN: 4,
+  SHARE: 5,
+  BROTHERHOOD: 6,
+  THE_RATFATHER: 7,
+  DOMINANCE_IS_FAMILY: 8
+}

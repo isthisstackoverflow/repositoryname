@@ -1,0 +1,25 @@
+* {
+  font-family: 'Courier New', monospace;
+}
+
+html, body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#map, #user-interface {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#user-interface {
+  pointer-events: none;
+}
+
+#user-interface * {
+  pointer-events: all;
+}

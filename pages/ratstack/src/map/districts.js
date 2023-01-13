@@ -7,21 +7,26 @@ import { Stroke, Style, Fill } from 'ol/style.js'
 
 import districts from '../data/districts.json'
 
-const style = new Style({ stroke: new Stroke({ color: '#333', width: 1 }), fill: new Fill({ color: 'rgba(255,255,255,0)' }) })
-const hoverStyle = new Style({ stroke: new Stroke({ color: '#333', width: 3 }), fill: new Fill({ color: 'rgba(255,255,255,0.0)' }) })
+const style = new Style({
+  stroke: new Stroke({ color: '#333', width: 1 }),
+  fill: new Fill({ color: 'rgba(255,255,255,0)' })
+})
 
-const districtSource = new VectorSource({
+const hoverStyle = new Style({
+  stroke: new Stroke({ color: '#333', width: 3 }),
+  fill: new Fill({ color: 'rgba(255,255,255,0.0)' })
+})
+
+export const districtSource = new VectorSource({
   features: (new GeoJSON({ featureProjection: 'EPSG:3857' })).readFeatures(districts)
 })
 
-const districtVector = new VectorLayer({
+export const districtVector = new VectorLayer({
   source: districtSource,
   style
 })
 
-const select = new Select({
+export const select = new Select({
   condition: pointerMove,
   style: hoverStyle
 })
-
-export { districtSource, districtVector, select }

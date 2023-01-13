@@ -4,10 +4,8 @@
   "version": "0.0.0",
   "description": "n'est pas un forfait",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0",
     "install:packages": "node ./scripts/install.js",
-    "publish:packages": "node ./scripts/publish.js",
-    "build:page": "cd ./pages/ratstack && npm run build"
+    "publish:packages": "node ./scripts/publish.js"
   },
   "repository": {
     "type": "git",

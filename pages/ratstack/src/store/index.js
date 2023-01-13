@@ -1,24 +1,18 @@
 import { createStore } from 'vuex'
-import createMap from '../map/createMap'
+import { getInitialState } from './getInitialState'
+import { map } from '../map'
 import {
   generateSimpleGetters,
   generateSimpleMutations
 } from '@repositoryname/vuex-generators'
 
-const map = createMap()
-
-const initialState = () => ({
-  eh: 0
-})
-
 export const store = createStore({
-  state: initialState,
+  state: getInitialState(),
   getters: {
-    ...generateSimpleGetters(initialState()),
-    map: () => map
+    ...generateSimpleGetters(getInitialState()),
   },
   mutations: {
-    ...generateSimpleMutations(initialState())
+    ...generateSimpleMutations(getInitialState())
   },
   actions: {
 

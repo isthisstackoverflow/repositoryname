@@ -1,5 +1,3 @@
-import 'ol/ol.css'
-
 import Map from 'ol/Map.js'
 import View from 'ol/View.js'
 import { fromLonLat } from 'ol/proj'
@@ -8,12 +6,12 @@ import { districtVector, select } from './districts'
 import { background } from './background'
 
 const center = [10.01534, 53.571532]
-const target = 'map-boss'
+const target = 'map'
 
-const map = new Map({
+// BEHOLD! THE SINGLETON!
+export const map = new Map({
   layers: [background, districtVector],
   target,
-  // explicitly no zoom control, doing that separately in React
   controls: [],
   view: new View({
     center: fromLonLat(center),
@@ -24,5 +22,3 @@ const map = new Map({
 })
 
 map.addInteraction(select)
-
-export default map

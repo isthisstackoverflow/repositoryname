@@ -1,11 +1,13 @@
-import VectorLayer from 'ol/layer/Vector.js'
-import VectorSource from 'ol/source/Vector.js'
-import Select from 'ol/interaction/Select.js'
-import GeoJSON from 'ol/format/GeoJSON.js'
-import { pointerMove } from 'ol/events/condition'
-import { Stroke, Style, Fill } from 'ol/style.js'
+// Knowing that one day JSON can be loaded fills you with determination.
+// import districts from './districts.json' assert {type: 'json'}
+import { districts } from './districtsjson.js'
 
-import districts from '../data/districts.json'
+const VectorLayer = ol.layer.Vector
+const VectorSource = ol.source.Vector
+const { Select } = ol.interaction
+const { GeoJSON } = ol.format
+const { pointerMove } = ol.events.condition
+const { Stroke, Style, Fill } = ol.style
 
 const style = new Style({
   stroke: new Stroke({ color: '#333', width: 1 }),
@@ -13,7 +15,7 @@ const style = new Style({
 })
 
 const hoverStyle = new Style({
-  stroke: new Stroke({ color: '#333', width: 3 }),
+  stroke: new Stroke({ color: '#000', width: 3 }),
   fill: new Fill({ color: 'rgba(255,255,255,0.0)' })
 })
 

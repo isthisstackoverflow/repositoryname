@@ -190,7 +190,7 @@ export const districtToPart = {
     'Horn',
     'Kleiner Grasbrook',
     'Neustadt',
-    // not used in game
+    // not used in game, awkward on the map
     // 'Neuwerk (Exklave)',
     'Rothenburgsort',
     'St. Georg',
@@ -237,123 +237,19 @@ export const districtToPart = {
   ]
 }
 
-// TODO note all neighbourh relations
-// TODO pull file apart and write tests for completeness
-// TODO consider to not write allowed, but only unallowed neighbourhood connections, and calculate others? Does ol offer something here?
-export const districtNeighbourRelation = {
-  // BERGEDORF
-  Kirchwerder: ['Ochsenwerder', 'Reitbrook', 'Neuengamme'],
-  Neuengamme: ['Kirchwerder', 'Reitbrook', 'Allermöhe', 'Curslack', 'Altengamme'],
-  Altengamme: ['Neuengamme', 'Curslack', 'Bergedorf'],
-  Curslack: ['Neuengamme', 'Allermöhe', 'Bergedorf', 'Altengamme'],
-  Bergedorf: ['Altengamme', 'Curslack', 'Allermöhe', 'Neuallermöhe', 'Billwerder', 'Lohbrügge'],
-  Ochsenwerder: ['Spadenland', 'Tatenberg', 'Reitbrook', 'Kirchwerder'],
-  Reitbrook: ['Ochsenwerder', 'Allermöhe', 'Neuengamme', 'Kirchwerder'],
-  Allermöhe: ['Reitbrook', 'Moorfleet', 'Billwerder', 'Neuallermöhe', 'Bergedorf', 'Curslack', 'Neuengamme'],
-  Neuallermöhe: ['Allermöhe', 'Billwerder', 'Bergedorf'],
-  Lohbrügge: ['Bergedorf', 'Billwerder', 'Billstedt'],
-  Billwerder: ['Neuallermöhe', 'Allermöhe', 'Moorfleet', 'Billbrook', 'Lohbrügge', 'Bergedorf'],
-  Spadenland: ['Tatenberg', 'Ochsenwerder'],
-  Tatenberg: ['Spadenland', 'Ochsenwerder', 'Moorfleet'],
-  Moorfleet: ['Tatenberg', 'Rothenburgsort', 'Billbrook', 'Billwerder', 'Allermöhe'],
-  // MITTE
-  Billstedt: [],
-  Horn: [],
-  Billbrook: [],
-  Hamm: [],
-  Rothenburgsort: [],
-  Veddel: [],
-  Wilhelmsburg: [],
-  'Kleiner Grasbrook': [],
-  Borgfelde: [],
-  Hammerbrook: [],
-  HafenCity: [],
-  'St. Georg': [],
-  'Hamburg-Altstadt': [],
-  Neustadt: [],
-  'St. Pauli': [],
-  Steinwerder: [],
-  Waltershof: [],
-  Finkenwerder: [],
-  // Harburg
-  Neuland: [],
-  'Gut Moor': [],
-  Rönneburg: [],
-  Wilstorf: [],
-  Harburg: [],
-  Sinstorf: [],
-  Langenbek: [],
-  Marmstorf: [],
-  Eißendorf: [],
-  Heimfeld: [],
-  Moorburg: [],
-  Altenwerder: [],
-  Hausbruch: [],
-  Francop: [],
-  'Neugraben-Fischbek': [],
-  Neuenfelde: [],
-  Cranz: [],
-  // ALTONA
-  Rissen: [],
-  Sülldorf: [],
-  Blankenese: [],
-  Iserbrook: [],
-  Nienstedten: [],
-  Osdorf: [],
-  'Groß Flottbek': [],
-  Othmarschen: [],
-  Ottensen: [],
-  'Altona-Altstadt': [],
-  'Altona-Nord': [],
-  Sternschanze: [],
-  Bahrenfeld: [],
-  Lurup: [],
-  // EIMSBÜTTEL
-  Schnelsen: [],
-  Niendorf: [],
-  Eidelstedt: [],
-  Stellingen: [],
-  Lokstedt: [],
-  Eimsbüttel: [],
-  'Hoheluft-West': [],
-  Harvestehude: [],
-  Rotherbaum: [],
-  // NORD
-  Langenhorn: [],
-  Fuhlsbüttel: [],
-  Ohlsdorf: [],
-  'Groß Borstel': [],
-  Alsterdorf: [],
-  Eppendorf: [],
-  'Hoheluft-Ost': [],
-  Winterhude: [],
-  'Barmbek-Nord': [],
-  'Barmbek-Süd': [],
-  Dulsberg: [],
-  Uhlenhorst: [],
-  Hohenfelde: [],
-  // WANDSBEK
-  Duvenstedt: [],
-  'Wohldorf-Ohlstedt': [],
-  'Lemsahl-Mellingstedt': [],
-  Bergstedt: [],
-  Volksdorf: [],
-  Sasel: [],
-  Poppenbüttel: [],
-  Hummelsbüttel: [],
-  Wellingsbüttel: [],
-  Bramfeld: [],
-  Steilshoop: [],
-  'Farmsen-Berne': [],
-  Rahlstedt: [],
-  Tonndorf: [],
-  Jenfeld: [],
-  Wandsbek: [],
-  Marienthal: [],
-  Eilbek: []
+export const districtPartNeighbourRelation = {
+  ...Object.fromEntries(
+    districtParts
+      .map((name) => {
+        /* TODO calculate neighbouring districts with
+        * turf.js or jsts or maybe ol suffices by now? */
+        const neighbours = []
+        return [name, neighbours]
+      })
+  )
 }
 
-export const districtIndex =
+export const districtPartIndex =
   districtParts.reduce((acc, next, i) => {
     acc[next] = i
     return acc

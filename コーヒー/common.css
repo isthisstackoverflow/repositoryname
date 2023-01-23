@@ -1,0 +1,31 @@
+@font-face {
+  font-family: Montserrat;
+  src: url('./montserrat/static/Montserrat-Regular.ttf') format('truetype');
+}
+
+html, body {
+  margin: 0;
+}
+
+article {
+  font-family: Montserrat;
+  height: 65vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1em;
+}
+
+article img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  margin: -1em;
+}
+
+h2 {
+  margin: 0;
+}

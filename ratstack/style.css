@@ -1,5 +1,6 @@
 * {
   font-family: 'Courier New', monospace;
+  color: #16161D;
 }
 
 html, body {
@@ -22,4 +23,40 @@ html, body {
 
 #user-interface * {
   pointer-events: all;
+}
+
+#headerbox {
+  position: absolute;
+  top: 0;
+  background: white;
+  border: 1px solid #16161D;
+  padding: 1em;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#headerbox h1 {
+  margin: 0;
+  white-space: nowrap;
+}
+
+#infobox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #16161D;
+  padding: 1em;
+  margin: 1em;
+}
+
+#modalbox {
+  position: absolute;
+  background: white;
+  color: #16161D;
 }

@@ -1,4 +1,5 @@
-import { districtVector, select } from "./districts.js"
+import { districtVector, hover } from "./districts.js"
+const { defaults } = ol.interaction.defaults
 
 const { Map, View } = ol
 const { Tile } = ol.layer
@@ -21,8 +22,7 @@ export const createMap = () => new Map({
     }),
     districtVector
   ],
-  interactions: [
-    select
-  ],
+  controls: [],
+  interactions: [hover],
   target,
 });
